@@ -1,0 +1,11 @@
+def reverse(n):
+    result = 0
+    num = n.bit_length()
+    for i in range(num):
+        result <<= 1
+        result |= (n & 1)
+        n >>= 1
+    return result
+number = int(input("Enter your original number: "))
+reversed_number = reverse(number)
+print("Reversed Number:", reversed_number)
